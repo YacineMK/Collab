@@ -12,19 +12,19 @@ const Barr =(props:any) => {
       {"title":"Calendar","icons":IoCalendarClearOutline}   
     ];
   return (
-    <div className="flex flex-col h-screen w-[22%] bg-gray-100 p-4 gap-9 border-r-2 border-gray-300">
-        <div>
+    <div className=" flex flex-col h-screen min-w-[22%] max-w-[25%]  p-5 gap-9 border-r-2 border-gray-300">
+        <div className="mt-4">
             <div className="flex items-center justify-between pr-1">
                   <div className="flex items-center">
                    <div className="h-2 w-2 rounded-full bg-green-500 mr-2"></div>
                    <h1 className="font-semibold text-l text-black"> {props.name} </h1>
                   </div>
-                 <Button variant="secondary" className="p-0 bg-indigo-700 text-white h-6 w-6">+</Button>
+                 <Button variant="secondary" className="p-0  bg-indigo-700 text-white h-6 w-6">+</Button>
             </div>
             <ul className="ml-3 mt-5 flex flex-col  gap-4">
             {listItems.map((item, index) => (
                 <li className="list-none flex items-center"  key={index}>
-                <item.icons className="mr-2"/>
+                <item.icons className="mr-3"/>
                 <h2>{item.title}</h2>
                 </li >
             ))}
